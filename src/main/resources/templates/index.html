@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>This Is The Home</h1>
+    <div th:insert="fragments/_header :: header"></div>
+    <img th:src="@{/img/sample.jpg}" alt="sample image">
+    <a th:href="@{/step1}">Learn How To Play Magic The Gathering</a>
+    <div th:insert="fragments/_footer :: footer"></div>
+</body>
+</html>
