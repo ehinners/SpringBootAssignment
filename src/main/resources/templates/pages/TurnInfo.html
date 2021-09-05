@@ -3,12 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Turn Info</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
+
+
 <div th:insert="fragments/_header :: header"></div>
-    Info about the turn
-<img th:src="@{/img/sample3.jpg}" alt="sample image3">
-<a th:href="@{/step3}">Move On To The Next Step In The Tutorial</a>
+<div id="widerWrapper">
+    <h2>Steps of a Turn</h2>
+    <hr>
+    <p class="leftContent">
+        Once it becomes your turn, there are certain steps to each turn, specifying when you can do each action, and how many times you can do each action.
+        Keep in mind, mana does not carry over turns, or even over steps. After each step of your turn, your mana pool will empty.
+        <br>
+        <br>
+        As you tap your lands to generate mana, you will quickly run out. Luckily, at the beginning of each turn, your cards "refresh". During the untap step, all tapped permanents become untapped, ready to be used again.
+        <br>
+        <br>
+        The upkeep step is a temporary step allowing interactive opportunity for cards before any other major action is taken.
+        Most cards that have abilities that activate once per turn happen here.
+        The Untap and Upkeep step are grouped together as the mana pool will not empty during the untap step.
+        <br>
+        <br>
+        The draw step is when the player is given a new resource. They draw a card from the top of their deck, (aka library) and put that card in their hand.
+        <b>If you attempt to draw from an empty library, you lose the game!</b>
+        <br>
+        <br>
+        The main phase is your primary development opportunity. During your main phase, you may cast any number of cards you wish, as long as you have the mana for it.
+        Certain types of cards can only be cast at this time, and certain types of actions can only be taken at this time. One type of card as such is a "Sorcery".
+        For communication's sake, each action that is "slow" in this regard is referred to as "at sorcery speed". This includes casting permanents (Such as creatures, artifacts, enchantments, or planeswalkers).
+        Instants and sorceries don't stick around. Once their ability resolves, they go to the discard pile.
+        <br>
+        <br>
+        Any ability or card that is "faster" can be cast at any time, during either player's turn, and at any step. These "fast" cards/actions are referred to by the namesake
+        type card, instants. Instants can be cast at any time so long as the player has mana. Anything at this speed is called "instant-speed",
+        or sometimes a slow card might have a special keyword that allows you to play it at instant speed. That special keyword is called "flash". Tapping lands for mana is also by default an instant-speed ability.
+        <br>
+        <br>
+        Also during the main phase is when the player is allowed to play a land. You may only play ONE land per turn. Basic lands enter untapped, and may be immediately used.
+        <br>
+        <br>
+        The combat step is when you can use your creatures to attack. See the combat info page for more detail.
+        <br>
+        <br>
+        After combat, the player is given a second main phase, but actions that can only happen once per turn, such as playing your land cannot be repeated.
+        You may choose to play your land either in the pre or post combat main phase, but only in one. Planeswalker abilities are once per turn in the same manner.
+        <br>
+        <br>
+        The End phase allows players to activate any abilities or cast any instant-speed spell/cards.
+        <br>
+        <br>
+        The cleanup step is the very last part of the turn. Several things happen here. First, the player must discard down to the hand limit (by default in most formats, 7 cards).
+        Second, all damage is removed from permanents that weren't destroyed. Third, all cards and abilities that refer to "end of turn" or "until end of turn" trigger.
+        <br>
+        <br>
+        Again, it's important to note the difference between sorcery speed, and instant speed. Also important is that mana pools will empty after every step in the turn.
+        Do not attempt to produce mana during the main phase, then use it during combat.
+    </p>
+
+    <img th:src="@{/img/turn structure.png}" alt="Diagram outlining the steps of each turn, as follows: Untap, Upkeep, Draw, Main Phase, Combat, Main Phase, End, Cleanup">
+    <div class="nextStep">
+        <a th:href="@{/step3}">Next ></a>
+    </div>
+
+</div>
 <div th:insert="fragments/_footer :: footer"></div>
 </body>
 </html>

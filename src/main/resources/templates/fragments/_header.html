@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
+<link rel="stylesheet" th:href="@{/styles.css}">
 <body>
 <header th:fragment="header">
+    <h3>Learn How To Play:</h3>
+    <h1> Magic The Gathering</h1>
     <nav>
         <ul>
-            <li><a th:href="@{/}">Home</a></li>
-            <li><a th:href="@{/step1}">Card Info</a></li>
-            <li><a th:href="@{/step2}">Turn Info</a></li>
-            <li><a th:href="@{/step3}">Combat Info</a></li>
+            <li id="ubrg"><a th:href="@{/}">Home</a></li>
+            <li id="wbrg"><a th:href="@{/step1}">Card Info</a></li>
+            <li id="wurg"><a th:href="@{/step2}">Turn Info</a></li>
+            <li id="wubg"><a th:href="@{/step3}">Combat Info</a></li>
+            <li id="wubr"><a th:href="@{/step4}">Formats</a></li>
         </ul>
+        <h3>How To Play</h3>
     </nav>
 </header>
 </body>

@@ -30,4 +30,10 @@ public class TutorialController
     {
         return "pages/CombatInfo";
     }
+
+    @RequestMapping("/step4")
+    public String showStep4()
+    {
+        return "pages/Formats";
+    }
 }

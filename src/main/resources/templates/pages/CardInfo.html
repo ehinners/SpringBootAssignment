@@ -3,12 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Card Info</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
-    <div th:insert="fragments/_header :: header"></div>
-    info about the card
-    <a th:href="@{/step2}">Move On To The Next Step In The Tutorial</a>
-    <img th:src="@{/img/sample2.jpg}" alt="sample image2">
-    <div th:insert="fragments/_footer :: footer"></div>
+
+
+<div th:insert="fragments/_header :: header"></div>
+<div id="widerWrapper">
+    <h2>What's On A Card?</h2>
+    <hr>
+
+        <ul class="leftContent">
+            <li><b>Card Type</b> - Describes the type of card it is. This dictates when the card can be cast, what properties the card has, and how other cards can reference it.</li>
+            <li><b>Sub-Type</b> - Further describes the type of card it is. Examples would be an "aura" for enchantment, "equipment" for artifact, or "human" for creature</li>
+            <li><b>Rules Text</b> - Describes the special abilities or properties an individual card might have.</li>
+            <li><b>Flavor Text</b> - An additional description of the character or lore of the card from the context of the fantasy setting. Has no effect on gameplay.</li>
+            <li><b>Mana Cost</b> - Dictates how much mana must be spent to cast the card.</li>
+            <li><b>Set Symbol</b> - Indicates what set the card is from. Usually has no effect on gameplay, with one or two exceptions.</li>
+            <li><b>Power</b> - Unique to creatures, power indicates how much damage the creature inflicts in combat.</li>
+            <li><b>Toughness</b> - Unique to creatures, toughness indicates how much damage the creature takes before it is destroyed.</li>
+        </ul>
+
+    <img th:src="@{/img/card diagram.png}" alt="Sample Image Card with properties highlighted and quantified">
+
+    <h2>How To Cast A Card?</h2>
+    <hr>
+
+    <p class="standardContent">
+        There are several properties of cards that indicate HOW and WHEN you can play your cards.
+        <br>
+        <b>MANA</b>
+        <br>
+        Magic primarily works off a resource system referred to as "Mana". You spend this mana to cast your cards.
+        Mana comes in FIVE different colors: White, Blue, Black, Red, and Green. An additional type of mana exists, referred to as "colorless", which is distinctly NOT a colored type of mana. These symbols can be found in the
+        casting cost of cards, and for each symbol, that indicates how many of that colored mana must be spent to cast the card.
+        A grey number indicates a generic mana requirement, this means additional mana of ANY color must be spent. Colorless symbols may be used to indicate that SPECIFICALLY colorless mana is required to cast that card.
+    </p>
+    <img th:src="@{/img/tap diagram.png}" alt="Sample Image Card 'tapped' or turned sideways ">
+    <h2>How To Get Mana?</h2>
+    <hr>
+    <p class="standardContent">
+        Mana primarily comes from lands, with "basic" land types corresponding to each of the five colored mana types, and an additional basic land type that can produce colorless mana.
+        These lands produce mana by "tapping" them. Simply rotate the card 90 degrees, to indicate that the land is spent, as shown in the diagram above. Mana symbols are shown on the right,
+        with White mana at the top, then in clockwise order, Blue, Black, Red, Green, and Colorless in the center. Note, that a player may tap for mana at any time, even if it is currently not being spent on anything.
+        <br>
+        <br>
+        Mana can also be spent to activate abilities, or pay additional costs. If mana is generated, it is tracked in something called the "Mana Pool". At any time you may put mana in your mana pool, so long as there are enough sources to generate it.
+        This mana can be used all at once, or for one ability/card at a time. For example, if one has one of each basic land (including colorless), they may be able to cast a spell with one green mana symbol and a 5 generic marker.
+        If they do that, they will expend ALL their mana. Instead, they may be able to play a card with 1 Red symbol, 1 Blue symbol, and 1 Generic, as well as an additional card with only 3 generic mana.
+        <br>
+        <br>
+        Lands correspond to each color. Plains generate white mana, Islands generate blue mana, Swamps generate black mana, mountains generate red mana, forests generate green Mana, and wastes generate colorless mana.
+        Sometimes lands can generate mana without being one of those types, in which case the card will indicate which color or colors it can produce. In addition to lands, sometimes cards can be tapped (turned sideways)
+        to activate abilities. Keep an eye out for the tap symbol.
+    </p>
+    <img th:src="@{/img/mana symbols.png}" alt="All Six Mana Symbols, White Mana At The Top, Then In Clockwise Order, Blue, Black, Red, Green, and Colorless In the Center">
+    <div class="nextStep">
+        <a th:href="@{/step2}">Next ></a>
+    </div>
+
+</div>
+<div th:insert="fragments/_footer :: footer"></div>
 </body>
 </html>

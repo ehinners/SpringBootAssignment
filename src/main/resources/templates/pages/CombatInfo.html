@@ -3,11 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Combat Info</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
+
+
 <div th:insert="fragments/_header :: header"></div>
-<img th:src="@{/img/sample4.jpg}" alt="sample image4">
-    Info about combat
+<div id="widerWrapper">
+    <h2>Swinging Sideways</h2>
+    <hr>
+    <p class="standardContent">
+        Combat is easily the most complicated part of the game, and as a step of the turn has further substeps.
+        Again, it is important to note that mana pools will empty during each sub-step.
+        <br>
+        <br>
+        Only the turn player may attack. Combat begins with an opportunity for instant-speed abilities to be activated, and instant speed cards to be played.
+        <br>
+        <br>
+        Combat then moves to a new sub-step, declaring attackers. When creatures attack, you must first indicate which creatures are attacking. To do so, they are tapped
+        just like lands are when they produce mana. A creature must be untapped before this step to be tapped for combat. Creatures do not by default create mana when they are tapped to attack. Secondly, the creatures must be pointed at an attack target.
+        By default, creatures are pointed at your opponent. If left unblocked, those creatures will inflict damage to the opponent's life total (this happens during a different sub-step)
+        However, in certain formats, there may be more than one opponent to attack, and planeswalkers are treated as seperate players. During the declare attackers step,
+        each attacking creature must have an intended and publicly stated attack target of an opponent or planeswalker.
+    </p>
+
+    <img th:src="@{/img/tap diagram.png}" alt="Sample Image Card 'tapped' or turned sideways ">
+    <p class="standardContent">
+        Once the attackers are declared, again the mana pools empty, and the defending player may declare blockers. Similar to attackers, tapped creatures may not be assigned as blockers.
+        A key difference is that <b>creatures do NOT need to be tapped to block.</b> A noteworthy broken parity is that multiple blockers can be assigned to block one creature. A blocker cannot block multiple creatures.
+        Again, during each of these substeps, players may activate or play instant speed effects or cards.
+        <br>
+        <br>
+        Once blockers are declared, and combat proceeds to the next substep, it's important to note that attackers that have had blockers assigned to them are considered blocked.
+        Unless a special ability says otherwise, a blocked attacker will deal damage (during a different substep) to the blocker, but NOT to the defending player.
+        Should a blocking creature be removed from the field at this time, or be tapped for some ability, note that this does NOT affect an attacking creature's status as blocked, and that blocked creature will STILL
+        deal no damage to its designated attack target (player or planeswalker).
+
+
+    </p>
+    <img th:src="@{/img/damage diagram.png}" alt="Sample Image Cards demonstrating how blocking works">
+    <p id="fullSpread">
+        There is a special sub-step of combat that is related to an ability some creatures may have. If a creature says it has "First Strike", or "Double Strike", then this
+        substep is not skipped. This is relevant for both <b>ATTACKING and DEFENDING</b> creatures with first strike or double strike. These relevant creature abilities are
+        another interesting point of broken parity. This means that the creature with these abilities deals damage, and creatures WITHOUT these abilities have to wait. A creature
+        with first strike or double strike will be difficult to profitably block or attack into, as during this step, it will destroy the creature it battles with before that creature can inflict damage back.
+        Again, this works for blocking too, as a blocking creature with first strike or double strike will destroy the attacking creature before the attacker can deal damage.
+        <br>
+        <br>
+        The next substep of combat is the combat damage step. It is at this step, the attacker may assign damage. Most of the time, this will not have any effect, but in the
+        circumstances that an attacking creature is blocked by more than one creature, the attacker may choose how much damage is inflicted to each blocker, so long as the sum total
+        of damage does not surpass the total power of the attacking creature. After damage is assigned, blockers and attackers deal damage simultaneously. Blockers will deal their power's worth of damage to the creature they are blocking.
+        If a creature receives an amount of damage greater than its toughness, it is destroyed. <b>NOTE: Creatures with first-strike do not deal damage during this substep, they dealt it last step.</b>
+        During this substep creatures BLOCKING a first-strike creature (if they are still on the battlefield) deal damage to the creature they are blocking.
+        <b>Double Strike creatures essentially get to attack TWICE, and will inflict damage again during this sub-step</b>
+        <br>
+        <br>
+        The next substep of combat is the end of combat step, in which players can cast or activate spells or abilities at instant-speed.
+    </p>
+    <div class="nextStep">
+        <a th:href="@{/step4}">Next ></a>
+    </div>
+
+</div>
 <div th:insert="fragments/_footer :: footer"></div>
 </body>
 </html>

@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
 <body>
-    <h1>This Is The Home</h1>
+
+
     <div th:insert="fragments/_header :: header"></div>
-    <img th:src="@{/img/sample.jpg}" alt="sample image">
-    <a th:href="@{/step1}">Learn How To Play Magic The Gathering</a>
+    <div id="wrapper">
+        <h2>Welcome!</h2>
+        <hr>
+    <p class="standardContent">
+        Originally developed by Richard Garfield in 1993, and released by Wizards of the Coast, Magic The Gathering
+        is THE classic trading card game. This website will walk fresh players, step by step, how to play this
+        all-time-great fantasy based game. Moving forward, keep in mind the words "spell" and "card" may be used interchangably,
+        the word "library" may refer to your deck, and "casting" a card means the same as playing a card.
+        <br>
+        <br>
+        As you encounter more cards, you may find cards that bypass rules such as once per turn limits. Remember: Reading The Card, Explains The Card
+    </p>
+
+    <img th:src="@{/img/planeswalker.png}" alt="Magic The Gathering Planeswalker Symbol Copyright Wizards of the Coast">
+        <div class="nextStep">
+            <a th:href="@{/step1}">Start Here</a>
+        </div>
+
+    </div>
     <div th:insert="fragments/_footer :: footer"></div>
 </body>
 </html>

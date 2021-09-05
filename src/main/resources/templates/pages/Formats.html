@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formats</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+
+
+<div th:insert="fragments/_header :: header"></div>
+<div id="widerWrapper">
+    <h2>The Many Ways to Play</h2>
+    <hr>
+    <p class="standardContent">
+        Some rules are flexible, and can be changed to cater each game to a different experience. Some established rulesets have become standardized and recognized
+        by players as "formats". For example, which cards you are allowed to put in your deck changes drastically in each format, and is usually each format's defining factor.
+        The "Standard" format, allows only newer cards, has a lower limit of at least 60 cards in a deck, is played 1 v 1, and with a starting life total of 20.
+        Most formats only allow 4 copies of a card per deck, with the exception being basic lands. You may put any number of basic lands in your deck in most formats.
+        <br>
+        <br>
+        There are some exciting formats out there, and you're encouraged to try them whenever you can! Draft is a special format where decks are constructed on the spot, one card
+        at a time from packs that are shared from a group of players. Commander is a format where you can only have 1 copy of a card per deck, have 100 card decks, and have a special designated "general" card that grants special abilities, and can be played at any time!
+
+    </p>
+
+    <img th:src="@{/img/mtg logo.png}" alt="Magic The Gathering Logos Copyright Wizards of the Coast">
+
+    </div>
+
+</div>
+<div th:insert="fragments/_footer :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+*
+{
+    font-family: Arial;
+}
+
+a:hover
+{
+    background-color: rgba(255, 240, 63, 0.35);
+}
+
+#wrapper
+{
+    width: 37%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    box-shadow: 3px 3px 3px #333333;
+    background: rgb(161,61,195);
+    background: linear-gradient(27deg, rgba(161,61,195,1) 0%, rgba(184,106,236,1) 100%);
+
+}
+
+#widerWrapper
+{
+    width: 75%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    box-shadow: 3px 3px 3px #333333;
+    background: rgb(161,61,195);
+    background: linear-gradient(27deg, rgba(161,61,195,1) 0%, rgba(184,106,236,1) 100%);
+}
+
+.nextStep
+{
+    border: blueviolet;
+    border-width: 0.1em;
+    padding: 0.3em;
+    border-style: inset;
+    width: 8em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 2em;
+    background-color: azure;
+}
+
+h2
+{
+    padding: 0.5em;
+    text-align: center;
+}
+
+hr{
+    width: 75%;
+}
+
+.standardContent{
+    padding: 2em;
+    margin: 2em;
+    display: inline-block;
+    width:25%;
+    background-color: plum;
+    border-style: inset;
+    border-color: plum;
+}
+
+#fullSpread
+{
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    background-color: plum;
+    border-style: inset;
+    border-color: plum;
+}
+
+.leftContent{
+    padding: 2em;
+    margin: 2em;
+    display: inline-block;
+    width:35%;
+    background-color: plum;
+    border-style: inset;
+    border-color: plum;
+    list-style-type: none;
+}
+
+img
+{
+    display: inline-block;
+    width: 55%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(88,4,172);
+
+    background-image: url("img/cardgamesbackgroundv3.png"), linear-gradient(49deg, rgba(88,4,172,1) 0%, rgba(139,70,252,0.7770308807116597) 100%) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+header
+{
+    text-align: center;
+}
+
+footer
+{
+    text-align: center;
+    color: white;
+}
+
+nav
+{
+    padding: 2%;
+    margin: auto;
+    width: 35%;
+    border: 0.5em solid black;
+    background-image: url("img/blank card.png");
+    background-size: 100% 100%;
+}
+
+#ubrg
+{
+    background-color:white;
+    border: 0.1em solid black;
+}
+
+#wbrg
+{
+    background-color:blue;
+    border: 0.1em solid black;
+}
+
+#wbrg a:link
+{
+    color:white;
+}
+
+#wbrg a:visited
+{
+    color:yellow;
+}
+
+#wurg
+{
+    background-color:black;
+    border: 0.1em solid black;
+}
+
+#wurg a:link{
+    color:white;
+}
+
+#wurg a:visited{
+    color:pink;
+}
+
+#wubg
+{
+    background-color:red;
+    border: 0.1em solid black;
+}
+
+#wubr
+{
+    background-color:green;
+    border: 0.1em solid black;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin: auto;
+    width: 90%;
+}
+
+nav li
+{
+    display: inline;
+    padding: 0.5em;
+    float:left;
+    width: 6em;
+
+}
+
+nav h3
+{
+    border: 0.1em solid black;
+    background-color: lightblue;
+    width: 8em;
+    margin: auto;
+    padding: 0.5em;
+    margin-top: 10%;
+}
+
+body {
+
+}
